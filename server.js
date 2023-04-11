@@ -5,7 +5,7 @@ const TrainerData = require('./models/Trainer')
 const TeamData = require('./models/Team');
 const { createEngine } = require('express-react-views');
 
-
+require('dotenv').config()
 const app = express();
 const PORT = 5000 
 
@@ -24,5 +24,6 @@ app.use(express.static('public'))
 
 //Routing 
 app.get('/', async (req, res) =>{
+     
 
 })

@@ -14,10 +14,7 @@ const pokemonSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-   hometown: {
-    type: String,
-    required: true
-   },
+
 })
 
 const Pokemon = mongoose.model('Pokemon', pokemonSchema)
