@@ -2,4 +2,4 @@ const TeamData = [{
 
 }]
 
-module.exports = TeamData
+module.exports = TeamData;
