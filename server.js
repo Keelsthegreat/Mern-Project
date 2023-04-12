@@ -1,30 +1,16 @@
 const express = require('express');
-const mongoose = require('mongoose')
-const PokemonData = require('./models/Pokemon')
-const TrainerData = require('./models/Trainer')
-const TeamData = require('./models/Team');
-const { createEngine } = require('express-react-views');
+const cors = require('cors');
+const pokemonRoutes = require('./routes/pokemon');
+const trainerRoutes = require('./routes/trainers');
 
-require('dotenv').config()
 const app = express();
-const PORT = 5000 
-
-//Middleware
-app.set('view engine', 'jsx')
-app.engine('jsx',require('express-react-views').
-createEngine())
-
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
 
-app.use(methodOverride('_method'))
-app.use(express.static('public'))
+app.use('/api/pokemon', pokemonRoutes);
+app.use('/api/trainers', trainerRoutes);
 
-//Routing 
-app.get('/', async (req, res) =>{
- //Get Route for Pokemon 
-     
-
-})
+const port = process.env.PORT
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
