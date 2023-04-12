@@ -24,6 +24,7 @@ app.use(express.static('public'))
 
 //Routing 
 app.get('/', async (req, res) =>{
+ //Get Route for Pokemon 
      
 
 })
