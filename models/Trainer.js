@@ -2,23 +2,16 @@ const mongoose = require('mongoose')
 
 
 const trainerSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    gender: {
-        type: String,
-        required: true,
-    },
-    badges: {
-        type: Number,
-        required: true
-    },
-   hometown: {
-    type: String,
-    required: true
-   },
-})
+    name: String,
+    teams: [{
+      name: String,
+      pokemon: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Pokemon',
+      }],
+    }],
+  });
+  
 
 const Trainer = mongoose.model('Trainer', trainerSchema)
 
