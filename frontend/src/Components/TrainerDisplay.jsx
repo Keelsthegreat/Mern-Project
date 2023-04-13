@@ -9,38 +9,65 @@ function TrainerDisplay() {
 
     const [teamName ,setTeamName] = useState('');
 
+    const fetchTrainer = async () => {
+        const response = await axios.get(`/api/trainers/${id}`)
+        setTrainerDis(response.data)
+    }
+
     useEffect(() => {
-        axios.get(`/api/trainers/${id}`)
-        .then(res => {
-            setTrainerDis(res.data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
+        fetchTrainer();
     },[id])
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        axios.post(`/api/trainers/${id}/teams`, {name:teamName})
-        .then(res => {
-            setTrainerDis(res.data)
-            setTeamName('')
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }  
+
+    const handleDeleteTeam = async (teamId) => {
+        await axios.delete(`/api/trainers/${id}/teams/${teamId}`);
+        fetchTrainer();
+    }
+
+
+
     if (!trainerDis) {
         return <div>Trainer Not Found...</div>
     }
     return(
         <div>
-            <h1>{trainerDis.name}</h1>
+            <h2>{trainerDis.name}'s Team</h2>
+            <form onSubmit = {async (e) => {
+                e.preventDefault();
+                await axios.post(`/api/trainers/${id}/teams`, {teamName})
+                setTeamName('');
+                fetchTrainer();
+            }} 
+            >
+              <label>
+                Add a Team:
+                <input type = "text" value = {teamName} onChange = {(e) => setTeamName(e.target.value)}/>
+                </label>  
+                <button type = "submit">Add</button>
+            </form>
             <ul>
                 {trainerDis.teams.map(crew => (
-                    <li key={crew._id}></li>
+                    <li key = {crew._id}>
+                        {crew.name}
+
+                        <ul>
+                            {crew.pokemon.map(pkmn => (
+                                <li key = {pkmn._id}>
+                                    {pkmn.name} - level {pkmn.level}
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
                 ))}
+                <form onSubmit = {handleDeleteTeam(crew._id)}>
+                    <button type = "submit">Delete Team</button>
+                </form>
             </ul>
+            
+                
+
         </div>
     )
 }
+
+export default TrainerDisplay
