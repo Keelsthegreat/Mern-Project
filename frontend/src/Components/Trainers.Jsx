@@ -34,7 +34,7 @@ function Trainers() {
             <h1>Trainers</h1>
             <ul> 
                 {trainers.map(trainee => (
-                    <li key={trainee.id}>
+                    <li key={trainee._id}>
                         <Link to={`/trainers/${trainee.id}`}>{trainee.name}</Link>
                     </li>
                 ))}
