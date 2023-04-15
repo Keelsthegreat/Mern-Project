@@ -9,16 +9,16 @@ function NavBar() {
         <div className=''>
         <ul className=''>
             <li>
-              <Link to = '/Index'></Link>
+              <Link to = '/Index'>Home</Link>
             </li>
             <li>
-                <Link to='/Pokedex'></Link>
+                <Link to='/Pokedex'>Pokedex</Link>
             </li>
             <li>
-                <Link to= '/Regions'></Link>
+                <Link to= '/Regions'>Regions</Link>
             </li>
             <li>
-                <Link to= '/Create Your Team'></Link>
+                <Link to= '/Create Your Team'>Create Your Team</Link>
             </li>
         </ul>
 
