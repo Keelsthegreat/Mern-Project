@@ -47,6 +47,7 @@ function TrainerDisplay() {
             </form>
             <ul>
                 {trainerDis.teams.map(crew => (
+                     <>
                     <li key = {crew._id}>
                         {crew.name}
 
@@ -58,10 +59,11 @@ function TrainerDisplay() {
                             ))}
                         </ul>
                     </li>
-                ))}
                 <form onSubmit = {handleDeleteTeam(crew._id)}>
                     <button type = "submit">Delete Team</button>
                 </form>
+                    </>
+                ))}
             </ul>
             
                 

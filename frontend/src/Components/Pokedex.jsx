@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const pdex = () => {
+const Pdex = () => {
   const [pokemonList, setPokemonList] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
 
@@ -47,3 +47,4 @@ const pdex = () => {
     </div>
   );
 };
+export default Pdex;
