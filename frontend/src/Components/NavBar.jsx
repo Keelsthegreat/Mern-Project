@@ -6,7 +6,7 @@ function NavBar() {
 
   return (
     <div className='navbar'>
-        <div className=''>
+        <div className='navbar a'>
         <ul className=''>
             <li>
               <Link to = '/Index'>Home</Link>
@@ -18,7 +18,7 @@ function NavBar() {
                 <Link to= '/Regions'>Regions</Link>
             </li>
             <li>
-                <Link to= '/Create Your Team'>Create Your Team</Link>
+                <Link to= '/Team'>Create Your Team</Link>
             </li>
         </ul>
 
@@ -29,4 +29,4 @@ function NavBar() {
   )
 }
 
-export default NavBar
+export default NavBar;

@@ -72,4 +72,4 @@ function TrainerDisplay() {
     )
 }
 
-export default TrainerDisplay
+export default TrainerDisplay;

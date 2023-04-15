@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const pokemonRoutes = require('./routes/pokemon');
-const trainerRoutes = require('./routes/trainers');
+const pokemonRoutes = require('./routes/pokemonRoutes');
+const trainerRoutes = require('./routes/trainerRoutes');
 
 const app = express();
 app.use(cors());
