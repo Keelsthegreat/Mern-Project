@@ -3,20 +3,25 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 
 
+
 function TrainerDisplay() {
-    const {id} = useParams
+    const {id} = useParams();
     const [trainerDis ,setTrainerDis] = useState (null);
 
     const [teamName ,setTeamName] = useState('');
 
+    
     const fetchTrainer = async () => {
         const response = await axios.get(`/api/trainers/${id}`)
         setTrainerDis(response.data)
     }
-
     useEffect(() => {
+        const fetchTrainer = async () => {
+            const response = await axios.get(`/api/trainers/${id}`)
+            setTrainerDis(response.data)
+        }
         fetchTrainer();
-    },[id])
+    }, [id])
 
 
     const handleDeleteTeam = async (teamId) => {

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import e from 'express';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -33,7 +32,7 @@ function Trainers() {
         <div>
             <h1>Trainers</h1>
             <ul> 
-                {trainers.map(trainee => (
+                {trainers.length > 0 && trainers.map(trainee => (
                     <li key={trainee._id}>
                         <Link to={`/trainers/${trainee.id}`}>{trainee.name}</Link>
                     </li>

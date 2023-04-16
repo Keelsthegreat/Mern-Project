@@ -18,6 +18,12 @@ function NavBar() {
                 <Link to= '/Regions'>Regions</Link>
             </li>
             <li>
+              <Link to = '/Trainers'>Trainer</Link>
+            </li>
+            <li>
+              <Link to = '/TrainerDis'>See Your Trainer</Link>
+            </li>
+            <li>
                 <Link to= '/Team'>Create Your Team</Link>
             </li>
         </ul>
