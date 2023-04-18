@@ -4,11 +4,11 @@ const DefaultLayout = require("./layout/DefaultLayout");
 class NewTrainer extends React.Component {
   render() {
     let { trainers } = this.props;
-    let { teams } = getTeams();
-
+    
     const getTeams = async () => {
       return await Team.find();
     };
+    let { teams } = getTeams();
 
     return (
       <div>
