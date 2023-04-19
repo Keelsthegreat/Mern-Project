@@ -4,14 +4,15 @@ const DefaultLayout = require("./layout/DefaultLayout");
 function AboutMe() {
   return (
       <DefaultLayout>
-    <div className="aboutList">
+    <div className="aboutList  ">
 
-      <h6>About Me</h6>
-      <p className="para"></p>
-      <p className="para">Here is my info below</p>
-      <p className="para">Email: akili.inniss@gmail.com </p>
+      <h1>About Me</h1>
+      <img src="https://avatars.githubusercontent.com/u/107443714?v=4"></img>
+      <p className="git"></p>
+      <p className="git">Here is my info below</p>
+      <p className="git">Email: akili.inniss@gmail.com </p>
       <a
-        href="https://github.com/Keelsthegreat"
+        href ="https://github.com/Keelsthegreat"
         target="_blank"
         className="git"
         >
@@ -19,7 +20,7 @@ function AboutMe() {
       </a>{" "}
       <br />
       <a
-        href="https://www.linkedin.com/in/akili-inniss-778611265/"
+        href ="https://www.linkedin.com/in/akili-inniss-778611265/"
         target="_blank"
         className="git"
         >

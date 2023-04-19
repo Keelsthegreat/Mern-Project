@@ -4,7 +4,9 @@ const DefaultLayout = require("./layout/DefaultLayout");
 function Pokedex(props) {
   const { pokemonList, pokemonData } = props;
   return (
-    <DefaultLayout className = "pokedexbody">
+    <DefaultLayout>
+    <div className="pokebody">
+
       <div className="pokedex">
         <h1 className="pokedex-title">Kanto Pokedex</h1>
         <ul className="pkmn-grid">
@@ -13,7 +15,7 @@ function Pokedex(props) {
               <img
                 src={pokemonData[index].sprites.front_default}
                 alt={pokemon.name}
-              />
+                />
               <h2>{pokemon.name}</h2>
               <div>
                 Type:{" "}
@@ -34,6 +36,7 @@ function Pokedex(props) {
         </ul>
       </div>
    
+          </div>
     </DefaultLayout>
   );
 }

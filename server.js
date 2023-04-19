@@ -6,6 +6,7 @@ const mongoConfig = require("./config");
 const teamRoutes = require("./routes/team");
 const aboutMe = require("./routes/aboutme");
 const pokemonCreate = require('./routes/pokemonCreate')
+const Home = require('./routes/home')
 
 // const cors = require("cors");
 // const mongoose = require("mongoose");
@@ -41,6 +42,7 @@ app.use("/trainers", trainerRoutes);
 app.use("/teams", teamRoutes);
 app.use("/about", aboutMe);
 app.use("/pokemoncreate", pokemonCreate)
+app.use("/", Home)
 
 
 const port = process.env.PORT;

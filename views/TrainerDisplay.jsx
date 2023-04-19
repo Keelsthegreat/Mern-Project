@@ -13,24 +13,31 @@ class TrainerDisplay extends React.Component {
 
     return (
         <DefaultLayout>
-
-      <div>
+      
+      <div className="trainerDis">
         <div>
           <h1>Trainers</h1>
-          <ul>
+          <ul class="list">
             {trainers.map((trainer) => (
-              <li key={trainer._id}>
+              <li key={trainer._id} className = "trainer-card">
+                
+
                 <div>
                   <img
                     src={trainer.image}
                     alt={trainer.name}
-                    height={"auto"}
+                    height={"195px"}
                     width={"200px"}
                     />
                 </div>
+
                 <p>
-                  {trainer.name} - {trainer.age} - {trainer.hometown}
+                  {trainer.name} 
                 </p>
+                
+                  <p>Age: {trainer.age} </p> 
+                
+                  <p>Hometown: {trainer.hometown}</p>
                 <form
                   action={`/trainers/${trainer._id}?_method=DELETE`}
                   method="POST"
@@ -40,6 +47,7 @@ class TrainerDisplay extends React.Component {
                 <form action = {`/trainers/${trainer._id}/edit`} method = "GET">
                 <button>Edit</button>
               </form>
+                   
               </li>
             ))}
           </ul>

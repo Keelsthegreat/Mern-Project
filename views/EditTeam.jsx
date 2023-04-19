@@ -2,15 +2,15 @@ const React = require('react');
 const DefaultLayout = require('./layout/DefaultLayout');
 
 function EditTrainer(props) {
-  const { pokemon } = props;
+  const { team } = props;
 
   return (
     <DefaultLayout>
 
-    <div>
+    <div className='editTrainerDis'>
 
-      <h1>Edit Trainer</h1>
-      <form action={`/pokemon/${pokemon._id}/edit?_method=PUT`} method="POST">
+      <h1>Edit Team</h1>
+      <form action={`/teams/${team._id}/edit?_method=PUT`} method="POST">
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" defaultValue={team.name}/>

@@ -13,7 +13,7 @@ class NewTrainer extends React.Component {
     return (
         <DefaultLayout>
 
-      <div>
+      <div className='editTrainerDis'>
         <h1>New Trainer</h1>
         <form action="/trainers" method="POST">
           <label htmlFor="name">Name:</label>

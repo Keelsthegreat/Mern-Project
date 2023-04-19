@@ -17,8 +17,8 @@ router.get("/new", async (req, res) => {
   router.post("/", async (req, res) => {
     console.log(req);
     try {
-      const { name, image, description, weight, height, types } = req.body;
-      const pokemon = new Pokemon({ name, image, description, weight, height, types });
+      const { name, image, level, types } = req.body;
+      const pokemon = new Pokemon({ name, image, level, types });
       const save = await pokemon.save();
       console.log(save);
       res.redirect("/pokemoncreate/show");
@@ -64,9 +64,9 @@ router.get("/new", async (req, res) => {
       const {id} = req.params;
       if (req.body){
   
-        const { name, image, description, weight, height, types } = req.body;
+        const { name, image, level, types } = req.body;
         // console.log(req.body, typeof name , typeof age, typeof hometown, typeof image)
-        const pokemon = await Pokemon.findByIdAndUpdate(id, {name, image, description, weight, height, types});
+        const pokemon = await Pokemon.findByIdAndUpdate(id, {name, image, level, types});
         res.redirect('/pokemoncreate/show')
       }else {
         return 

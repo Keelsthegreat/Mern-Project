@@ -1,9 +1,20 @@
-/* Pokedex Container */
+@font-face {
+  font-family: 'pokemonFont' ;
+  src: url('Pokemon_GB.woff') format('woff');
+         
+}
+
 body {
-  background-image: url('https://wallpapercave.com/wp/wp7380493.png');
-  background-repeat: no-repeat;
+  font-family:'Courier New', Courier, monospace;
+  
+}
+
+/* Pokedex Container */
+.pokebody {
+
   width: 100%;
-  height: max-content;
+  height: 100%;
+  
   
 }
 
@@ -28,7 +39,7 @@ body {
 /* Pokemon List */
 .pkmn-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 3fr);
   grid-gap: 30px;
   list-style: none;
   margin: 0;
@@ -127,20 +138,7 @@ body {
   margin-top: 1rem;
 }
 
-.trainer-card {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  background-color: #f7f7f7;
-}
 
-.trainer-card img {
-  height: 50px;
-  width: 50px;
-  margin-right: 0.5rem;
- 
-}
 
 .team-card-actions {
   display: flex;
@@ -201,4 +199,239 @@ body {
   background-color: #333;
   color: #fff;
   border-radius: 5px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+/* Trainer card styles */
+.trainer-card {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  
+}
+
+.trainer-card img {
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+.trainer-card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.trainer-card button {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+ margin-left: 75px;
+  
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+ 
+
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%;
+}
+
+.trainer-card button:hover,
+.trainer-card button:focus {
+ opacity: .75;
+}
+
+.trainerDis {
+  background-image: url('https://wallpaperset.com/w/full/c/3/f/39182.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  width: 100%;
+  height: 100%;
+  
+
+}
+
+.pokemonDis {
+  background-image: url('https://wallpaperaccess.com/full/7433498.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% ;
+ 
+}
+
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+ user-select: none;
+  background-color: #fff;
+  border: 1px solid #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+/* 
+--------------------------- */
+
+.editTrainerDis {
+  background-color: #fff;
+  border: 6px double #000;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.superDiv{
+  background-color: #5b5b5b;
+}
+
+.git{
+  font-size: 25px;
+  color: white;
+}
+
+.aboutList {
+  display: block;
+  text-align: center;
+  margin-top: 130px;
+  background-color: #333;
+  color: rgb(246, 233, 233);
+  height: 900px;
+
+}
+
+.homePic {
+width: 800px;
+height: 600px;
+
+
+}
+
+.homepage {
+  text-align: center;
+  
+}
+
+
+/* CSS */
+.btn {
+  appearance: none;
+  background-color: rgb(99, 6, 143);
+  border: 2px solid #000000;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #f7f7f7;
+  cursor: pointer;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  will-change: transform;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
 }

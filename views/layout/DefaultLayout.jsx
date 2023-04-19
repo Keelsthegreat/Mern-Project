@@ -9,9 +9,10 @@ class DefaultLayout extends React.Component {
           <link rel= "stylesheet" href = "/styles.css"/>
       
       </head>
-      <body>
+      <body className = "body">
 
         <nav className = 'navbar'>
+          <a href = "/">Home</a>
           <a href="/pokemon">Pokedex</a>
           <a href="/teams/show">View Teams</a>
           <a href="/trainers/show">View Trainer's</a>

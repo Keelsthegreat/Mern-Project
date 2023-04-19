@@ -8,7 +8,7 @@ class NewTeam extends React.Component {
     return (
         <DefaultLayout>
 
-      <div>
+      <div className='editTrainerDis'>
         <h1>Create a Team</h1>
         <form action="/teams" method="POST">
           <label htmlFor="name">Name:</label>

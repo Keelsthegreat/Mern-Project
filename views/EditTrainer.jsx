@@ -7,25 +7,23 @@ function EditTrainer(props) {
   return (
     <DefaultLayout>
 
-    <div>
+    <div className='editTrainerDis'>
 
-      <h1>Edit Trainer</h1>
-      <form action={`/trainers/${trainer._id}/edit?_method=PUT`} method="POST">
-        <div>
+      <h1 className="form-title">Edit Trainer</h1>
+      <form action={`/trainers/${trainer._id}/edit?_method=PUT`} method="POST" className="edit-form">
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" defaultValue={trainer.name}/>
+          <input type="text" id="name" name="name" defaultValue={trainer.name} className="form-control"/>
         </div>
-        <label htmlFor = "age">Age:</label>
-        <input type = "number" id = "age" name = "age" defaultValue = {trainer.age}/>
-        <div>
-        <div>
-            <label htmlFor = "hometown">HomeTown:</label>
-            <input type = "text" id = "hometown" name = "hometown" defaultValue = {trainer.hometown}/>
+        <div className="form-group">
+          <label htmlFor="hometown">HomeTown:</label>
+          <textarea name="hometown" defaultValue={trainer.hometown} className="form-control" />
         </div>
+        <div className="form-group">
           <label htmlFor="image">Image:</label>
-          <input type="url" id="image" name="image" defaultValue={trainer.image} />
+          <input type="text" id="image" name="image" defaultValue={trainer.image} className="form-control" />
         </div>
-       <button type="submit">Save</button> 
+       <button type="submit" className="btn btn-primary">Save</button> 
       </form>
    
     </div>

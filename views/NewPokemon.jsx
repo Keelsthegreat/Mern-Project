@@ -11,8 +11,8 @@ class NewPokemon extends React.Component {
         <DefaultLayout>
 
       <div>
-        <div>
-      <h1>Create a new Pokemon</h1>
+        <div className='editTrainerDis'>
+      <h1>Create Pokemon</h1>
       <form action="/pokemoncreate" method="POST" >
         <div>
           <label htmlFor="name">Name:</label>
@@ -22,20 +22,13 @@ class NewPokemon extends React.Component {
           <label htmlFor="image">Image:</label>
           <input type="text" id="image" name="image" />
         </div>
+      
         <div>
-          <label htmlFor="description">Description:</label>
-          <textarea id="description" name="description" required></textarea>
+          <label htmlFor="level">Level:</label>
+          <input type="number" id="level" name="level" />
         </div>
         <div>
-          <label htmlFor="weight">Weight:</label>
-          <input type="text" id="weight" name="weight" />
-        </div>
-        <div>
-          <label htmlFor="height">Height: </label>
-          <input type="text" id="height" name="height" />
-        </div>
-        <div>
-          <label htmlFor="types">Types:</label>
+          <label htmlFor="types">Type:</label>
           <input type="text" id="types" name="types" />
         </div>
         <button type="submit">Create</button>

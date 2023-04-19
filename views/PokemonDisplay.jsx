@@ -37,27 +37,28 @@ class PokemonDisplay extends React.Component {
     return (
         <DefaultLayout>
 
-      <div>
-      <h1>Created Pokemon</h1>
-      <ul>
+      <div className="pokemonDis">
+      <h1>Pokemon</h1>
+      <ul className="list">
         {pokemon.map((pkmn) => (
-          <li key={pkmn._id}>
+          <li key={pkmn._id} className = "trainer-card">
+            
+
             <h2>{pkmn.name}</h2>
             <img src={pkmn.image} alt={pkmn.name} />
-            <p>{pkmn.descrkmn}</p>
-            <p>Weight: {pkmn.weight} kg</p>
-            <p>Height: {pkmn.height} m</p>
-            <p>Types: {pkmn.types}</p>
+            <p>Level: {pkmn.level}</p>
+           <p>Type: {pkmn.types}</p>
             <form action={`/pokemoncreate/${pkmn._id}?_method=DELETE`} method="POST">
                 <button>Delete</button>
               </form>
               <form action = {`/pokemoncreate/${pkmn._id}/edit`} method = "GET">
                 <button>Edit</button>
               </form>
+            
           </li>
         ))}
       </ul>
-      <a href="/pokemoncreate/new">Create a New Pokemon</a>
+      <a className="trainer-card" href="/pokemoncreate/new">Create a New Pokemon</a>
     </div>
         </DefaultLayout>
   );

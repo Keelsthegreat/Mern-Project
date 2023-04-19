@@ -11,6 +11,8 @@ class TeamDisplay extends React.Component {
 
     return (
       <DefaultLayout>
+        <div className="superDiv">
+
         <div className="teams-container">
           <h1>Teams</h1>
           <ul className="teams-list">
@@ -42,8 +44,9 @@ class TeamDisplay extends React.Component {
               </li>
             ))}
           </ul>
-          <a href="/teams/new">Create a Team</a>
+          <a  className="btn" href="/teams/new">Create a Team</a>
         </div>
+            </div>
       </DefaultLayout>
     );
   }
