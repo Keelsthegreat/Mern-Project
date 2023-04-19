@@ -36,7 +36,7 @@ class TrainerDisplay extends React.Component {
                 >
                   <button>Delete</button>
                 </form>
-                <form action = {`/trainers/${trainer._id}/edit`} method = "POST">
+                <form action = {`/trainers/${trainer._id}/edit`} method = "GET">
                 <button>Edit</button>
               </form>
               </li>

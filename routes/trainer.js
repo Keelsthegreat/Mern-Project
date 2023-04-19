@@ -45,7 +45,7 @@ router.get('/:id/edit', async (req, res) => {
     const {id} = req.params;
 
     const trainer = await Trainer.findById(id);
-
+        
      res.render("EditTrainer", {trainer})
   } catch (error) {
     console.error(error);
@@ -53,13 +53,19 @@ router.get('/:id/edit', async (req, res) => {
   }
 });
 
-router.post('/:id/edit', async (req, res) => {
+router.put('/:id/edit', async (req, res) => {
   try {
     const {id} = req.params;
-    const {name, age , hometown, image } = req.body;
-    console.log(req.body, typeof name , typeof age, typeof hometown, typeof image)
-    const trainer = await Trainer.findByIdAndUpdate(id, {name, age, hometown, image});
-    res.render("EditTrainer", {trainer})
+    if (req.body){
+
+      const {name, age , hometown, image } = req.body;
+      console.log(req.body, typeof name , typeof age, typeof hometown, typeof image)
+      const trainer = await Trainer.findByIdAndUpdate(id, {name, age, hometown, image});
+      res.redirect('/trainers/show')
+    }else {
+      return 
+    }
+    
     
   } catch (error) {
     console.error(error);

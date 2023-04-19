@@ -9,7 +9,7 @@ function EditTrainer(props) {
 
     <DefaultLayout/>
       <h1>Edit Trainer</h1>
-      <form action={`/trainers/${trainer._id}/edit`} method="POST">
+      <form action={`/trainers/${trainer._id}/edit?_method=PUT`} method="POST">
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" defaultValue={trainer.name}/>
@@ -24,7 +24,7 @@ function EditTrainer(props) {
           <label htmlFor="image">Image:</label>
           <input type="url" id="image" name="image" defaultValue={trainer.image} />
         </div>
-        <button type="submit">Save</button>
+       <button type="submit">Save</button> 
       </form>
    
     </div>

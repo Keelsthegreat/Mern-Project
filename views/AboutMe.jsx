@@ -3,8 +3,9 @@ const DefaultLayout = require("./layout/DefaultLayout");
 
 function AboutMe() {
   return (
+      <DefaultLayout>
     <div className="aboutList">
-      <DefaultLayout />
+
       <h6>About Me</h6>
       <p className="para"></p>
       <p className="para">Here is my info below</p>
@@ -13,7 +14,7 @@ function AboutMe() {
         href="https://github.com/Keelsthegreat"
         target="_blank"
         className="git"
-      >
+        >
         GitHub
       </a>{" "}
       <br />
@@ -21,10 +22,11 @@ function AboutMe() {
         href="https://www.linkedin.com/in/akili-inniss-778611265/"
         target="_blank"
         className="git"
-      >
+        >
         LinkedIn
       </a>
     </div>
+        </DefaultLayout>
   );
 }
 

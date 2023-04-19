@@ -60,9 +60,9 @@ class TeamDisplay extends React.Component {
               <form action={`/teams/${team._id}?_method=DELETE`} method="POST">
                 <button>Delete</button>
               </form>
-              {/* <form action = {`/teams/${team._id}/edit?_method=PUT`} method = "POST">
+              <form action = {`/teams/${team._id}/edit`} method = "GET">
                 <button>Edit</button>
-              </form> */}
+              </form>
             </li>
           ))}
         </ul>

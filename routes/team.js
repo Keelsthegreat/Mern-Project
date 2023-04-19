@@ -49,4 +49,37 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+router.get('/:id/edit', async (req, res) => {
+  try {
+    const {id} = req.params;
+
+    const team = await Team.findById(id);
+        
+    res.render("EditTeam", {team})
+  } catch (error) {
+    console.error(error);
+    res.status(404).send('Trainer not found');
+  }
+});
+
+router.put('/:id/edit', async (req, res) => {
+  try {
+    const {id} = req.params;
+    if (req.body){
+
+      const {name, description , trainers, image } = req.body;
+      const team = await Team.findByIdAndUpdate(id, {name, description, trainers, image});
+      res.redirect('/teams/show')
+    }else {
+      return 
+    }
+    
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+})
+
+
 module.exports = router;
