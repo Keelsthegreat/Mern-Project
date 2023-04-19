@@ -44,9 +44,9 @@ router.get('/:id/edit', async (req, res) => {
   try {
     const id = req.params.id;
 
-    await Trainer.findById(id);
+    const trainer = await Trainer.findById(id);
 
-    res.redirect('/trainers/show')
+     res.render("EditTrainer", {trainer})
   } catch (error) {
     console.error(error);
     res.status(404).send('Trainer not found');
