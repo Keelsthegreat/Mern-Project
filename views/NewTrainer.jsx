@@ -11,8 +11,9 @@ class NewTrainer extends React.Component {
     // let { teams } = getTeams();
 
     return (
+        <DefaultLayout>
+
       <div>
-        <DefaultLayout />
         <h1>New Trainer</h1>
         <form action="/trainers" method="POST">
           <label htmlFor="name">Name:</label>
@@ -31,6 +32,7 @@ class NewTrainer extends React.Component {
           <input type="submit"></input>
         </form>
       </div>
+        </DefaultLayout>
     );
   }
 }
