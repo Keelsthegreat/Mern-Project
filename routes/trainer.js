@@ -42,7 +42,7 @@ router.delete("/:id", async (req, res) => {
 
 router.get('/:id/edit', async (req, res) => {
   try {
-    const id = req.params.id;
+    const {id} = req.params;
 
     const trainer = await Trainer.findById(id);
 

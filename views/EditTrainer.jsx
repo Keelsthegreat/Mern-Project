@@ -24,7 +24,10 @@ function EditTrainer(props) {
           <label htmlFor="image">Image:</label>
           <input type="url" id="image" name="image" defaultValue={trainer.image} />
         </div>
+        <form action = '/trainers/show'>
         <button type="submit">Save</button>
+
+        </form>
       </form>
    
     </div>
