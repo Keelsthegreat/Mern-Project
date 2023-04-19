@@ -6,8 +6,9 @@ class NewTeam extends React.Component {
     let { trainers } = this.props;
 
     return (
+        <DefaultLayout>
+
       <div>
-        <DefaultLayout />
         <h1>Create a Team</h1>
         <form action="/teams" method="POST">
           <label htmlFor="name">Name:</label>
@@ -34,6 +35,7 @@ class NewTeam extends React.Component {
           <button type="submit">Create a Team</button>
         </form>
       </div>
+            </DefaultLayout>
     );
   }
 }

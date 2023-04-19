@@ -5,9 +5,10 @@ function EditTrainer(props) {
   const { trainer } = props;
 
   return (
+    <DefaultLayout>
+
     <div>
 
-    <DefaultLayout/>
       <h1>Edit Trainer</h1>
       <form action={`/trainers/${trainer._id}/edit?_method=PUT`} method="POST">
         <div>
@@ -28,6 +29,7 @@ function EditTrainer(props) {
       </form>
    
     </div>
+    </DefaultLayout>
   );
 }
 
