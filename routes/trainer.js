@@ -40,4 +40,31 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+router.get('/:id/edit', async (req, res) => {
+  try {
+    const id = req.params.id;
+
+    await Trainer.findById(id);
+
+    res.redirect('/trainers/show')
+  } catch (error) {
+    console.error(error);
+    res.status(404).send('Trainer not found');
+  }
+});
+
+router.post('/:id/edit', async (req, res) => {
+  try {
+    const {id} = req.params;
+    const {name, age , hometown, image } = req.body;
+    console.log(req.body, typeof name , typeof age, typeof hometown, typeof image)
+    const trainer = await Trainer.findByIdAndUpdate(id, {name, age, hometown, image});
+    res.render("EditTrainer", {trainer})
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+})
+
 module.exports = router;

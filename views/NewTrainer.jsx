@@ -5,10 +5,10 @@ class NewTrainer extends React.Component {
   render() {
     let { trainers } = this.props;
     
-    const getTeams = async () => {
-      return await Team.find();
-    };
-    let { teams } = getTeams();
+    // const getTeams = async () => {
+    //   return await Team.find();
+    // };
+    // let { teams } = getTeams();
 
     return (
       <div>
