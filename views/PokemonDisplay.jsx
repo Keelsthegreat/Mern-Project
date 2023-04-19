@@ -35,8 +35,9 @@ class PokemonDisplay extends React.Component {
     console.log("PkmnDisplay Data:", pokemon);
 
     return (
+        <DefaultLayout>
+
       <div>
-        <DefaultLayout/>
       <h1>Created Pokemon</h1>
       <ul>
         {pokemon.map((pkmn) => (
@@ -58,6 +59,7 @@ class PokemonDisplay extends React.Component {
       </ul>
       <a href="/pokemoncreate/new">Create a New Pokemon</a>
     </div>
+        </DefaultLayout>
   );
         
 }}
