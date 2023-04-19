@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   try {
     const pokemonResponse = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=272"
+      "https://pokeapi.co/api/v2/pokemon?limit=151"
     );
     const pokemonList = pokemonResponse.data.results;
     const pokemonDataPromises = pokemonList.map((pokemon) =>

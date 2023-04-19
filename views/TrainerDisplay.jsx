@@ -12,8 +12,9 @@ class TrainerDisplay extends React.Component {
     // };
 
     return (
+        <DefaultLayout>
+
       <div>
-        <DefaultLayout />
         <div>
           <h1>Trainers</h1>
           <ul>
@@ -25,7 +26,7 @@ class TrainerDisplay extends React.Component {
                     alt={trainer.name}
                     height={"auto"}
                     width={"200px"}
-                  />
+                    />
                 </div>
                 <p>
                   {trainer.name} - {trainer.age} - {trainer.hometown}
@@ -33,7 +34,7 @@ class TrainerDisplay extends React.Component {
                 <form
                   action={`/trainers/${trainer._id}?_method=DELETE`}
                   method="POST"
-                >
+                  >
                   <button>Delete</button>
                 </form>
                 <form action = {`/trainers/${trainer._id}/edit`} method = "GET">
@@ -45,6 +46,7 @@ class TrainerDisplay extends React.Component {
           <a href="/trainers/new">Create a Trainer</a>
         </div>
       </div>
+            </DefaultLayout>
     );
   }
 }

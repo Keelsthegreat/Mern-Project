@@ -35,7 +35,7 @@ class NewTeam extends React.Component {
           <button type="submit">Create a Team</button>
         </form>
       </div>
-            </DefaultLayout>
+        </DefaultLayout>
     );
   }
 }

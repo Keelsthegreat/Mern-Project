@@ -11,7 +11,7 @@ class DefaultLayout extends React.Component {
       </head>
       <body>
 
-        <nav>
+        <nav className = 'navbar'>
           <a href="/pokemon">Pokedex</a>
           <a href="/teams/show">View Teams</a>
           <a href="/trainers/show">View Trainer's</a>

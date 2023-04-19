@@ -1,55 +1,204 @@
- /* .pkmn-grid  {
+/* Pokedex Container */
+body {
+  background-image: url('https://wallpapercave.com/wp/wp7380493.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: max-content;
   
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        font-size: 34px;
- }   
-      
-      .pkmn-grid li {
-        background-color: #f8f8f8;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .pkmn-grid li:hover {
-        background-color: #e8e8e8;
-      
+}
+
+.pokedex {
+
+  border: 1px solid #D4D4D4;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #D4D4D4;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Pokedex Title */
+.pokedex h1 {
+  color: #4A4A4A;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Pokemon List */
+.pkmn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pokemon Card */
+.pkmn-card {
+  background-color: #fff;
+  border: 1px solid #D4D4D4;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #D4D4D4;
+  overflow: hidden;
+  text-align: left;
+}
+
+.pkmn-card img {
+  display: block;
+  height: 150px;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 150px;
+}
+
+.pkmn-card h2 {
+  font-size: 24px;
+  margin: 10px 0 0 0;
+}
+
+.pkmn-card div {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.pkmn-card .type {
+  background-color: #D4D4D4;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+
+.pkmn-card .height,
+.pkmn-card .weight {
+  margin-top: 5px;
 }
 
 
+.teams-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teams-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.team-card {
+  display: flex;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  flex-direction: column;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 300px;
+}
+
+.team-card-info {
+  padding: 1rem;
+  color: white;
+}
+
+.team-card-info h2 {
+  margin-top: 0;
+}
+
+.team-card-info img {
+  display: block;
+  margin: 0 auto;
+}
+
+.trainers-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.trainer-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f7f7f7;
+}
+
+.trainer-card img {
+  height: 50px;
+  width: 50px;
+  margin-right: 0.5rem;
  
+}
+
+.team-card-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+.team-card-actions button {
+  margin-right: 0.5rem;
+}
+
+.team-card-actions button:last-child {
+  margin-right: 0;
+}
 
 
-.pkmn-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-size: 34px;
-  }
-  
-  .pkmn-grid li {
-    background-color: #f8f8f8;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .pkmn-grid li:hover {
-    background-color: #e8e8e8;
-  } */
+
+
+
+
+
+/* --------------------------------------------- */
+
+.navbar {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.navbar .active a {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
