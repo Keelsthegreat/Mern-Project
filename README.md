@@ -13,6 +13,10 @@ This is a Pokemon app built to look at pokemon from Generation 1, create teams, 
  # Things to Improve/ Work On
  - Feature that allows you to add pokemon from the API to trainers and teams
  
+ Click on The Link Below 
+ 
+ http://localhost:5000/
+ 
  
  
 
